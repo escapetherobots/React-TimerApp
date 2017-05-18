@@ -1,3 +1,3 @@
-###React BoilerPlate
-##Template for React Projects
+###React Timer App
+2nd App to learn React
 ----------------------------------
