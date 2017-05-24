@@ -36,11 +36,12 @@ var Clock = React.createClass({
 
 
 	render: function(){
-		var {totalSeconds} = this.props
+		var {totalSeconds} = this.props;
+		var formattedTimeResult = this.formatSeconds(totalSeconds);
 
 		return (
 			<div className="clock">
-				<span className="clock-text">{this.formatSeconds(totalSeconds)}</span>
+				<span className="clock-text">{formattedTimeResult}</span>
 				
 				
 				
