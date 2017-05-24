@@ -26,8 +26,8 @@ var Nav = React.createClass({
 				
 						<ul className="menu" data-hide-for="medium">
 							<li className="menu-text">CRUX TIMER</li>
-							<li><IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bolder'}}>Timer</IndexLink></li>
-							<li><Link to="/countdown" activeClassName="active" activeStyle={{fontWeight: 'bolder'}}>Countdown</Link></li>
+							<li><IndexLink to="/" activeClassName="active">Timer</IndexLink></li>
+							<li><Link to="/countdown" activeClassName="active">Countdown</Link></li>
 							
 			
 							

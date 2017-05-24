@@ -1,7 +1,7 @@
 var React = require('react');
 
 var TimerControls = require('TimerControls');
-var TimerClock = require('TimerClock');
+var Clock = require('Clock');
 
 // var About = React.createClass({
 // 	render: function(){
@@ -20,7 +20,6 @@ var Timer = React.createClass({
 			<div className="row">
 				<div className="columns medium-8 large-8 small-centered">
 					<h2 className="text-center page-title">Timer</h2>
-					<TimerClock />
 					<TimerControls />
 				</div>
 			</div>
