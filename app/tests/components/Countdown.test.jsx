@@ -38,5 +38,38 @@ describe('Countdown', () => {
 		}, 3001)
 	});
 
+	//ASYNC TESTS
+	it('should pause countdown on paused status', (done) => {
+		var countdown = TestUtils.renderIntoDocument(<Countdown />);
+		countdown.handleSetCountdown(3);
+
+		countdown.handleStatusChange('paused');
+
+		// this test is asynchronous...it will normally fail so use the DONE arg
+		setTimeout( () => {
+			expect(countdown.state.count).toBe(3);
+			expect(countdown.state.countdownStatus).toBe('paused');
+			done();
+		}, 1001)
+	});
+
+	//ASYNC TESTS
+	it('should stop countdown on stopped status', (done) => {
+		var countdown = TestUtils.renderIntoDocument(<Countdown />);
+		countdown.handleSetCountdown(3);
+
+		countdown.handleStatusChange('stopped');
+
+		// this test is asynchronous...it will normally fail so use the DONE arg
+		setTimeout( () => {
+			expect(countdown.state.count).toBe(0);
+			expect(countdown.state.countdownStatus).toBe('stopped');
+			done();
+		}, 1001)
+	});
+
+
+
+
 	
 });

@@ -3,6 +3,13 @@
 @import "components/clock";
 @import "components/controls";
 
+.page-title{
+	text-transform: uppercase;
+	margin: 2rem 0;
+	text-align: center;
+	
+}
+
 p {
 	color: $darkgrey;
 }
