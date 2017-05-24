@@ -13,6 +13,7 @@ describe('Clock', () => {
 	});
 });
 
+//check that the component will render to DOM
 describe('Render Component', () => {
 	it('should render the clock to DOM', () => {
 		//STEP 1:
@@ -30,6 +31,8 @@ describe('Render Component', () => {
 	});
 });
 
+
+//Check that component will format the seconds correctly
 describe('Format Seconds', () => {
 	it('should return formated seconds', () => {
 		var clock = TestUtils.renderIntoDocument(<Clock />);

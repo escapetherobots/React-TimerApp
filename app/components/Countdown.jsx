@@ -22,6 +22,12 @@ var Countdown = React.createClass({
 		};
 	},
 
+	componentWillUnmount() {
+		//console.log('will unmount: by by');
+		clearInterval(this.timer);
+		this.timer = undefined;
+	},
+
 	componentDidUpdate(prevProps, prevState) {
 		//if react sees a change in the state (any time a button changes the countdownStatus)!!!
 		if(this.state.countdownStatus !== prevState.countdownStatus){
@@ -39,12 +45,6 @@ var Countdown = React.createClass({
 			}
 		}
 		
-	},
-
-	componentWillUnmount() {
-		//console.log('will unmount: by by');
-		clearInterval(this.timer);
-		this.timer = undefined;
 	},
 
 	startTimer(){
@@ -79,7 +79,7 @@ var Countdown = React.createClass({
 		//------------------
 		var renderControlArea = () => {
 			if (countdownStatus !== 'stopped'){
-				return <Controls onStatusChange={this.handleStatusChange} countdownStatus={countdownStatus}/>
+				return <Controls onStatusChange={this.handleStatusChange} inputStatus={countdownStatus}/>
 			} else {
 				return <CountdownForm onSetCountdown={this.handleSetCountdown}/>
 			}
